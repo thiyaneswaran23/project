@@ -10,9 +10,9 @@ function Signup() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:3000/signup',{email,password}
+        axios.post('http://localhost:3000/signup',{email,password})
             .then(result=>console.log(result))
-            .catch(err=>console.log(err))
+            .catch(err=>console.log(err)
         )
         
         console.log("New Account -> Email:", email, "Password:", password);
@@ -47,7 +47,7 @@ function Signup() {
                 </form>
                 <p className="signup-text">
                     Already have an account? 
-                    <button className="signup-btn" onClick={() => navigate("/")}>
+                    <button className="signup-btn" onClick={() => navigate("/signin")}>
                         Login
                     </button>
                 </p>
